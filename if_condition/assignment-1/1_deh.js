@@ -280,5 +280,113 @@ if ( 60 < Tugsgerel ){
     console.log("bat" + Tugsgerel  + " tentsseegui ee");
 }
 // temtseen
+var a = (98 + 108 + 89)/3
+var b = (88 + 91 + 110)/3
+if ( a > 100 || b > 100){
+    if (a < b){
+        console.log("B bag ylsan baina");
+    }else if ( a ==b ){
+        console.log("Hoyr bag tentssen baina");
+    } else {
+        console.log(" A bag ylsan baina");
+    }
+} else {
+    console.log("Ali ch bag hojoogui ");
+}
 
+// easy 1
+var A = 1, B = 2, C = 3, D = 4, F = 5;
+//easy 2
+ var sar, uld ;
+ sar = prompt("sariin dugaar oruul");
+ uld = sar % 2
+ if ( uld == 0 ){
+    if (sar == 2){
+        console.log("28 ymuu 29");
+    } else if ( sar >= 8 ){
+        console.log("31 honogtoi");
+    } else {
+        console.log("30 honogtoi ");
+    }4
+ } else{
+    if ( sar >= 9 ){
+        console.log("30 honogtoi");
+    } else {
+        console.log("31 honogtoi");
+    }
+ } 
 
+//easy 3
+var too = 140, huva, huvaah;
+huva = too % 3;
+huvaah = too % 7;
+if ( too > 0 ){
+    if (huva == 0 ){
+        console.log("Ug too 3iin urjiver mun");
+    }else if( huvaah == 0){
+        console.log("Ug too 7giin urjiver mun");
+    }else {
+        console.log("Ug too aliniihan ch urjiver bish");
+    }
+} else {
+    console.log("eyreg too oruulna uu");
+}
+
+//easy 4 
+var n = 12;
+if ( n > 0){
+    console.log("positive");
+} else {
+    console.log("negative");
+}
+//easy 5
+var weight = 62, height = 1.81, index, uzuulelt;
+index = (weight/ (height**2))
+if (index < 18){
+    console.log("Jingiin tutagdaltai baina");
+} else if (index < 24){
+    console.log("Eruul baina ");
+}else if (index < 29){
+    console.log("Iluudeltei");
+}else {
+    console.log('Het targallalttai bna ');
+}
+//easy 6
+var b, a = 100;
+b = 100 %2 ;
+if ( b == 0){
+    console.log("Tegsh too");
+} else {
+    console.log("Sondgoi");
+}
+
+//easy 7
+var n = -12 ;
+if ( n > 0 ){
+    console.log("eyreg too");
+} else{
+    console.log("surug");
+}
+// easy 8
+var nas, on; 
+// on = prompt("Tursun on")
+// nas = 2022 - on
+// if ( nas < 1){
+//     console.log("Infant");
+// } else if ( nas < 3){
+//     console.log("Toddler");
+// } else if ( nas < 5){
+//     console.log("Preschool");
+// } else if ( nas < 12){
+//     console.log("Gradeschool");
+// } else if ( nas < 18){
+//     console.log("Teen");
+// } else if ( nas < 21){
+//     console.log("Young adult");
+// } else {
+//     console.log("Adult");
+// } 
+// TIP 
+let payment = 3000;
+let tuluh = payment >= 5000 && payment <= 30000 ?  (payment * 0.15 + payment ) : (payment *0.2 + payment)
+console.log("tanii tuluh dun "+ tuluh );
