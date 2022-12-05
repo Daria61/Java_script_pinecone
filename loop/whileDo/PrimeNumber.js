@@ -1,42 +1,20 @@
-let n = prompt("too oruul ");k =2, res = true
-while(n > k && n < k && k < 100){
-    if (n % k == 0 ){
-        res= false
+let garaasAvna = 10;
+for  ( let toolol = 1;toolol < garaasAvna; toolol ++){
+    for( let  oo = 1; oo < 100; oo ++){
+        for( let qq = 1; qq < 10 ; qq++){
+            if( oo % qq == 0){
+                if (oo == qq ){
+                    mess = true 
+                } else {
+                    mess = false 
+                    break
+                }
+            }else {
+                mess = true
+            }
+        }
+        if (mess){
+            console.log(oo);
+        }
     }
-    k++;
 }
-
-// while(k <= 100){
-//     if (k < n){
-//         if (n % k == 0 ){
-//             res = true 
-//          } else {
-//              res = false 
-//          }
-//     } else if (k > n){
-//         if (n % k == 0 ){
-//             res = true 
-//          } else {
-//              res = false 
-//          }
-//     k++
-//     }
-// }
-
-if (res){
-    console.log("mun ");
-} else {
-    console.log("bish");
-}
-
-
-// if (k % 2 !== 0 &&  k % 3 !== 0 && k % 5 !== 0 && k % 7 !== 0){
-//     if (n == k){
-//         console.log("anhnii too");
-//     } else{
-//         console.log("anhnii too bish ");
-//     }
-// }  
-// else {
-//     console.log("anhnii too bish ");
-// }
