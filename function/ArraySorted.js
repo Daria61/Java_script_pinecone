@@ -9,7 +9,7 @@
 //             }
 //         } 
 //     }
-//     console.log(ary);
+//     console.log(ary);`
 // }
 // arraySorter(arr)
 
