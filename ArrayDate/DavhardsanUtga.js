@@ -7,3 +7,4 @@ for(i = 0; i < simple.length; i ++){
         } 
     }
 }
+    
