@@ -18,14 +18,12 @@ function arraySorter(ary){
     let bagaToo = ary[0], daraalal = []
     for (j = 0; j < ary.length; j++){
         for(i = 0 ; i < ary.length; i++){
-            if (ary[i] == null){
-            } else {
-                if (bagaToo < ary[i]){
-                } else {
+            if (ary[i] !== null){
+                if (bagaToo <! ary[i]){
                     bagaToo = ary[i]
                     a = i
                 }
-            }
+            } 
         }
         ary[a] = null
         daraalal.push(bagaToo)
