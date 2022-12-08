@@ -1,4 +1,4 @@
-let mur = 10, start = 1, array = [], bigAry =[];
+let mur = 11, start = 1, array = [], bigAry =[];
 for (i = 0; i < mur ; i++ ){
     if(i == 0){
         array.push(start)
