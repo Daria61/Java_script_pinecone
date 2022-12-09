@@ -56,52 +56,29 @@ const users = [
       points: 40
     }
   ]
-  // Хамгийн их настай 3 хүмүүсийн мэдээллийг хэвлэх
-// let ih = 0 , age = Object.values(users.age)
-let ih = 0, nas = [];
-for (i = 0 ; i < users.length; i++){
-  nas.push(users[i].age)
-}
-for (i = 0 ; i < nas.length; i ++){
-  for (j = 0 ; j < nas.length; j ++){
-    if (nas[j] > nas[j+ 1]){
-      var tempo = nas[j]
-      nas[j] = nas[j + 1]
-      nas[j + 1] =tempo
-    } 
-  }
-}
-for (j = 1; j <= 3; j++){
-  undur = nas[nas.length - j]
-  for(l = 0; l < users.length; l++){
-    if (undur == users[l].age){
-      console.log(users[l]);
+  // console.log(users[2]);
+  //Хэрэглэгчийн объектод олон ур чадвар эзэмшсэн хүнийг олоорой.
+  let  a = 0
+  for (i = 0; i < users.length; i++){
+    if (a < users[i].skills.length){
+      a = users[i].skills.length
+      b = i 
     }
   }
-}
-
-  // // console.log(users[2]);
-  // //Хэрэглэгчийн объектод олон ур чадвар эзэмшсэн хүнийг олоорой.
-  // let  a = 0
-  // for (i = 0; i < users.length; i++){
-  //   if (a < users[i].skills.length){
-  //     a = users[i].skills.length
-  //     b = i 
-  //   }
-  // }
-  // console.log(users[b]);
-  // //Нэвтэрсэн хэрэглэгчдийг тоолж, дараах объектоос 50-аас дээш оноо авсан хэрэглэгчдийг тоол.
-  // console.log(users.length);
-  // let Too = 0
-  // for (i = 0; i < users.length; i++){
-  //   if (50 < users[i].points){
-  //     too ++
-  //   }
-  // }
-  // console.log(Too);
-  // // Хэрэглэгчийн объектоос MERN ( MongoDB, Express, React, Node ) стек хөгжүүлэгч хүмүүсийг олоорой.
-  // for (i = 0; i < users.length; i++){
-  //   if (users[i].skills.includes("MongoDB") && users[i].skills.includes("Express") && users[i].skills.includes("React") && users[i].skills.includes("Node")){
-  //     console.log(users[i]);
-  //   }
-  // }
+  console.log(users[b]);
+  //Нэвтэрсэн хэрэглэгчдийг тоолж, дараах объектоос 50-аас дээш оноо авсан хэрэглэгчдийг тоол.
+  console.log(users.length);
+  let Too = 0
+  for (i = 0; i < users.length; i++){
+    if (50 < users[i].points){
+      too ++
+    }
+  }
+  console.log(Too);
+  // Хэрэглэгчийн объектоос MERN ( MongoDB, Express, React, Node ) стек хөгжүүлэгч хүмүүсийг олоорой.
+  for (i = 0; i < users.length; i++){
+    if (users[i].skills.includes("MongoDB") && users[i].skills.includes("Express") && users[i].skills.includes("React") && users[i].skills.includes("Node")){
+      console.log(users[i]);
+    }
+  }
+// Хамгийн их настай 3 хүмүүсийн мэдээллийг хэвлэх
