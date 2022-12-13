@@ -8,9 +8,7 @@ document.getElementById("orange").style.color = " orange "
 let sp = document.getElementsByTagName("li");
 let img = document.getElementsByTagName("img");
 sp[0].addEventListener("click", changeImg)
-for (){
 
-}
 
 
 function colorChange(){
