@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.getElementById("red").style.color = "red"
 document.getElementById("green").style.color = "green"
 document.getElementById("blue").style.color = "blue"
@@ -8,6 +9,19 @@ sp.addEventListener("click", changeImg)
 function changeImg(){
     img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Solid_red.svg/768px-Solid_red.svg.png?20150316143248"
 }
+=======
+document.getElementById("red").style.color = " red "
+document.getElementById("green").style.color = "green "
+document.getElementById("blue").style.color = " blue "
+document.getElementById("black").style.color = " black "
+document.getElementById("yellow").style.color = " yellow "
+document.getElementById("orange").style.color = " orange "
+
+let sp = document.getElementsByTagName("li");
+let img = document.getElementsByTagName("img");
+sp[0].addEventListener("click", changeImg)
+
+>>>>>>> feca83bbd8d886c0d18a09702d8d5f96d9c098b3
 
 let green = document.querySelector("#green")
 green.addEventListener("click", changeG)
