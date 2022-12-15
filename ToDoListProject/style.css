@@ -42,26 +42,39 @@
 }
 
 /* section two */
+#list>div{
+    height: 350px;
+    overflow: scroll;
+}
 #list h1 {
     color: #fff;
     text-align: center;
     border-bottom: 3px solid #5F4B8BFF ;
 }
-#list>div {
+#list>div>div {
     color: #000;
     background-color:  #5F4B8BFF;
     padding: 10px;
     display: flex;
     margin: 10px 0;
 }
-#list>div>p {
+#list>div .listItem {
+    border: none;
     margin: 0;
     width: 100%;
-    overflow: hidden;
+    background-color:  #5F4B8BFF;
 }
-#list input{
-    margin-right: 10px;
+::placeholder{
+    color: #000;
 }
 #list>div>div{
     align-self: flex-end;
+}
+#list div i{
+    margin: 5px;
+}
+#list>div>div i:hover{
+
+    border-radius: 4px;
+    background-color:   rgb(145, 113, 214);
 }
