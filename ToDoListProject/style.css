@@ -45,6 +45,7 @@
 #list>div{
     height: 350px;
     overflow: scroll;
+    scroll-margin-bottom: no;
 }
 #list h1 {
     color: #fff;
