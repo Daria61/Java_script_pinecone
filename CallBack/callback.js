@@ -1,5 +1,4 @@
 let options = document.getElementsByClassName("option")
-console.log(document.getElementsByClassName("option"));
 function burenBugluh (){
     document.getElementsByTagName("select")[1].disabled = false
     for (i = 0 ; i <options.length; i++){
@@ -7,9 +6,6 @@ function burenBugluh (){
             console.log(aimagNer);
         }
     }
-
-
-
 }
 
 function ableSum(burenBugluh){
