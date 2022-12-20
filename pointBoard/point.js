@@ -1,38 +1,44 @@
 let sumBtn = document.getElementsByTagName("button")[0]
-let utga = document.getElementsByTagName("input")
 sumBtn.addEventListener("click", Uzuuleh)
-
-let prom = new Promise((resolve, reject) =>{
-    let utga = document.getElementsByTagName("input")
-    for (i = 0 ; i < utga.length; i++){
-
-        console.log(utga[0].value);
-
-        if(utga[i].value == ""){
-            reject("error")
-            break;
-        } else {
-            resolve("sucess")
+ function Uzuuleh(event){
+    event.preventDefault();
+    let utga = document.querySelectorAll("input")
+    let success = document.getElementById("medeelel")
+    for (let i = 0 ; i < utga.length; i ++){
+        if(utga[i].value.length == 0){
+            success.innerHTML = "false"
+            break
+        } else{
+            success.innerHTML = "true"
+            Filled()
+            break
         }
     }
+ }
+ let ListPer = []
+ function Filled() {
+    let pointView = document.getElementById("listBoard")
+    let row = ""
+    let utga = document.querySelectorAll("input")
+    ListObj = {ner :utga[0].value, ovog : utga[1].value, huis : utga[2].value, onoo : utga[3].value}
+    row+=`
+        <div id = "${ListPer.length}">
+           <p>ner : ${utga[0].value} </p>
+           <p>ovog : ${utga[1].value}</p>
+           <p>gender :${utga[2].value}</p>
+           <p>point : ${utga[3].value}</p>
+           <button>+5</button>
+           <button class = "delete">delete</button>
+        </div>`  
+    ListPer.push(row)
+    pointView.innerHTML = ListPer
+
+    let ustag = document.getElementsByClassName("delete")
+    console.log(ustag);
+    ustag[0].addEventListener("click", function(){
+    let pointView = document.getElementById("listBoard")
+    pointView.remove()
 })
-
- function Uzuuleh(event){
-
-    event.preventDefault();
-    prom.then((res)=> {
-        console.log(res);
-        // medee = "succes"
-            let not = document.getElementById("medeelel")
-            not.innerHTML = "Amjelttei nemlee"
-    })
-    prom.catch((err)=>{
-        // medee = "error"
-        console.log(err);
-        let not = document.getElementById("medeelel")
-        not.innerHTML = "Zaaval bugdiin buglunu uu"
-    })
- 
 
  }
 
