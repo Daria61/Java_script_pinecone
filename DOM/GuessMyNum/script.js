@@ -12,6 +12,7 @@ function newStart (){
     document.getElementsByClassName("score")[0].innerHTML = score
     document.getElementsByClassName("highscore")[0].innerHTML = amjelt
     document.getElementsByClassName("message")[0].innerHTML = "Тааж эхлээрэй..."
+    document.getElementsByTagName("body")[0].style.backgroundColor = "#000"
 }
 
 function start (){
@@ -26,6 +27,7 @@ function start (){
             lost()
         } else if ( too == a ) {
             document.getElementsByClassName("message")[0].innerHTML = "Зөв байна!!!"
+            document.getElementsByTagName("body")[0].style.backgroundColor = "#60b347"
             amjelt = amjelt + 1
             document.getElementsByClassName("highscore")[0].innerHTML = amjelt
         } else {
@@ -39,6 +41,7 @@ function start (){
 
         document.getElementsByClassName("massage").innerHTML = "Тоо оруулна уу!!!"
     }
+    document.getElementsByClassName("guess")[0].value = ""
 }
 
 function lost (){
