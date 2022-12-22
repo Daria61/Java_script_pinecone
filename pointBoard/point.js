@@ -1,19 +1,26 @@
-let sumBtn = document.getElementsByTagName("button")[0]
-sumBtn.addEventListener("click", Uzuuleh)
- function Uzuuleh(event){
-    event.preventDefault();
-    let utga = document.querySelectorAll("input")
+ function Uzuuleh(){
     let success = document.getElementById("medeelel")
-    for (let i = 0 ; i < utga.length; i ++){
-        if(utga[i].value.length == 0){
-            success.innerHTML = "false"
-            break
-        } else{
-            success.innerHTML = "true"
-            Filled()
-            break
+    let utga = document.querySelectorAll("input")
+    let prom = new Promise((resolve, reject ) =>{
+        let bool = true
+        for (let i = 0 ; i < utga.length; i ++){
+            if(utga[i].value.length > 0){
+                bool = true
+            } else{
+                bool = false
+                break
+            }
         }
-    }
+        if (bool){
+            success.innerHTML = "true"
+            resolve("Amjilt form ")
+        }else {
+            success.innerHTML = "false"
+            reject("input hooson")
+        }
+        
+    })
+    prom.then((res)=> Filled()).catch(err=>console.log(err))
  }
  let ListPer = []
  function Filled() {
@@ -21,26 +28,35 @@ sumBtn.addEventListener("click", Uzuuleh)
     let row = ""
     let utga = document.querySelectorAll("input")
     ListObj = {ner :utga[0].value, ovog : utga[1].value, huis : utga[2].value, onoo : utga[3].value}
-    row+=`
+    ListPer.push(ListObj)
+    console.log(ListPer);
+    for (i = 0 ; i < ListPer.length; i++){
+        row+=`
         <div id = "${ListPer.length}">
-           <p>ner : ${utga[0].value} </p>
-           <p>ovog : ${utga[1].value}</p>
-           <p>gender :${utga[2].value}</p>
-           <p>point : ${utga[3].value}</p>
+           <p>ner : ${ListPer[i].ner} </p>
+           <p>ovog : ${ListPer[i].ovog}</p>
+           <p>gender :${ListPer[i].huis}</p>
+           <p>point : ${ListPer[i].onoo}</p>
            <button>+5</button>
-           <button class = "delete">delete</button>
+           <button id = "${i}" onclick = "deleteFun()">delete</button>
         </div>`  
-    ListPer.push(row)
-    pointView.innerHTML = ListPer
-
-    let ustag = document.getElementsByClassName("delete")
-    console.log(ustag);
-    ustag[0].addEventListener("click", function(){
-    let pointView = document.getElementById("listBoard")
-    pointView.remove()
-})
-
+    pointView.innerHTML = row
+    }
  }
-
-
+ function deleteFun (id){
+    console.log(id);
+    let btns = document.getElementsByTagName("button")
+    console.log(btns);
+    for (i = 0; i <btns.length; i++){
+        if (id == btns[i].id){
+            console.log("olson");
+            let pointView = document.getElementById("listBoard")
+            let removeList = document.getElementById("0")
+            console.log(document.getElementById("0"));
+            pointView.removeChild(removeList)
+        }
+    }
+ }
+    
+       
 
