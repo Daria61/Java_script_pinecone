@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="firstSection">
+            <h1>Search country</h1>
+            <div id="search">
+                <input type="text" placeholder="Country name here" id="input">
+                <select name="" id="select">
+                    <option value="0">Select</option>
+                </select>
+                <span id="TotalCountry"></span>
+            </div>
+        </div>
+        <div id="SecondSection">
+            <h1>Sort</h1>
+            <div id="sortSec">
+                <ul>
+                    <li id="sort" onclick="sort('name')">Sort by country name  ↑</li>
+                    <li id="sort" onclick="sort('population')">Sort by population  ↑</li>
+                    <li id="sort" onclick="sort('area')">Sort by area  ↑</li>
+                </ul>
+            </div>
+        </div>
+        <div id="ThirdSection">
+            <h1>Part</h1>
+            <div id="Part">
+                <p onclick="buleg('region')">Region</p>
+                <p onclick="buleg('firstLetter')">First Letter</p>
+            </div>
+        </div>
+        <div id="ListOfcountry">
+
+        </div>
+    </main>
+    <script src="country.js"></script>
+</body>
+</html>
