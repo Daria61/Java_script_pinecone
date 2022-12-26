@@ -1,0 +1,38 @@
+#contain{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+}
+#DateTask{
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    color: #888;
+}
+#inputSec{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+#inputSec input{
+    width:250px;
+    border: 0;
+    border-bottom: 1px solid orange;
+    background-color: #FFCDC3 ;
+    padding: 10px;
+}
+#inputSec button{
+    background-color: orange;
+    border: 0;
+    padding: 5px;
+}
+#listCon {
+    color: black;
+}
+#listCon>div>div{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
