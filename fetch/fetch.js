@@ -26,8 +26,9 @@ function Name(){
     return nameTxt
 }
 function img(){
-    let scr = Perarray.results[0].picture.medium
-    return scr
+    let pic = Perarray.results[0].picture.large
+    let img = document.getElementById("img")
+    img.innerHTML = `<img src ="${pic}">`
 }
 async function allWorkWell(){
     let all = await Name()
@@ -36,6 +37,4 @@ async function allWorkWell(){
     console.log(pic);
     let infor = document.getElementById("information")
     infor.innerHTML = all
-     let im = document.getElementById("IMG").scr 
-     im = `${pic}`
 }
