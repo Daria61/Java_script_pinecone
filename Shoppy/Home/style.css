@@ -39,3 +39,26 @@ aside{
     color: black;
     position: absolute;
 }
+#modal{
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    height: 500px;
+    width: 500px;
+    display: none;
+}
+#wishlisTotal{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+}
+#wishlisTotal>p{
+    font-size: 16px;
+}
+#logo{
+    object-fit: contain;
+    height: 50px;
+}
+#modalover{
+    height: 300px;
+}
