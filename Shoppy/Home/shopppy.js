@@ -26,7 +26,7 @@ function inner(para){
     let row = ''
     list.innerHTML = "";
     (para ? (para.length == 0 ? [] : para) : allProduct).map((a) =>{
-        row+= `<div class = "col-3 ">
+        row+= `<div class = "col-md-4 col-6  ">
         <a href="./detail.html?productID=${a.id}" >
         <div> 
         <div class = "m-2 border rounded p-0">
@@ -37,8 +37,11 @@ function inner(para){
         <p class = "descrip">Description: ${a.description}</p>
         </a>
         <div class ="row">
-            <p class ="col"><i class="color-warning bi bi-star-fill"></i> ${a.rating}/5</p>
-            <button class ="col btn btn-primary" onclick="AddWish('${a.id}')" >Add</button>
+            <div class ="col-7">
+                <p><i class="color-warning bi bi-star-fill"></i> ${a.rating}/5</p>
+                <p class="discount rounded-1 p-1">${a.discountPercentage}% OFF</p>
+            </div>
+            <button class ="col-5 btn btn-primary" onclick="AddWish('${a.id}')" >Add</button>
         </div>
         </div>
         </div></div>
@@ -115,7 +118,7 @@ function Modal(){
                 <p class = "col-3">${a.price}</p>
                 <div class= "col-2 row ">
                     <button class = " btn col-2"> <i class="bi bi-trash3"></i></button>
-                    <button class = " btn  col-2 ms-5"><i class="bi bi-three-dots"></i></button>
+                    <button class = " btn  col-2 ms-5"><a href="./detail.html?productID=${a.id}"><i class="bi bi-three-dots"></i></a></button>
                 </div>
             </div>
             `

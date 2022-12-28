@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-img{
+#list img{
     object-fit: cover;
     overflow: hidden;
     width: 100%;
@@ -50,6 +50,14 @@ aside{
     width: 500px;
     display: none;
 }
+#modalnem{
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    height: 500px;
+    width: 500px;
+    display: none;
+}
 #wishlisTotal{
     position: absolute;
     bottom: 50px;
@@ -64,4 +72,10 @@ aside{
 }
 #modalover{
     height: 300px;
+}
+.discount{
+    color: rgb(42, 170, 42);
+    background-color:  rgb(218, 253, 218);
+    font-size: 9px;
+    display: inline-block;
 }
