@@ -36,11 +36,16 @@
         <aside class="col-2  mt-4  ">
             <h5 class="border rounded p-2 text-center" ><i class="bi bi-caret-down pe-2"></i> Category</h5>
             <div id="asideCate"></div>
+            <div class="pt-3">
+                <div id="sortByprice">
+                    <button class="btn btn-outline-info mb-2" onclick="SortByPrice('low')">Price: Low → High</button>
+                    <button class="btn btn-outline-info" onclick="SortByPrice('high')">Price: High → Low</button>
+                </div>
+            </div>
         </aside>
         <div id="list" class="row p-4 col-9"></div>
         <div id="Pages"></div>
     </main>
     <script src="shopppy.js"></script>
-    <script src="ProductDetails.js"></script>
 </body>
 </html>

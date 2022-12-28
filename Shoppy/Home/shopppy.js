@@ -93,6 +93,15 @@ function AddWish(id){
     console.log(wishList);
     wish.innerHTML = wishNum
 }
+function DeleteWish(index){
+    console.log(index);
+    wishList.map((a,id) =>{
+        if(index == id){
+            wishList.splice(id, 1)
+        }
+    })
+    Modal()
+}
 function Modal(){
     let row = ""
     let roow = ""
@@ -117,8 +126,8 @@ function Modal(){
                 <p class = "col-4 overflow-hidden">${a.title}</p>
                 <p class = "col-3">${a.price}</p>
                 <div class= "col-2 row ">
-                    <button class = " btn col-2"> <i class="bi bi-trash3"></i></button>
-                    <button class = " btn  col-2 ms-5"><a href="./detail.html?productID=${a.id}"><i class="bi bi-three-dots"></i></a></button>
+                    <button class = "btn col-2" onclick="DeleteWish('${index}')"> <i class="bi bi-trash3"></i></button>
+                    <button class = "btn  col-2 ms-5"><a href="./detail.html?productID=${a.id}"><i class="bi bi-three-dots"></i></a></button>
                 </div>
             </div>
             `
@@ -146,4 +155,13 @@ function Modal(){
         document.getElementById("modal").style.display = "none"
     })   
 }
-
+function SortByPrice(param){
+    console.log(param);
+    if(param == "low"){
+        allProduct.sort((a,b) => a.price - b.price)
+        console.log(allProduct)
+    }else{
+        allProduct.sort((a,b) => b.price - a.price)
+    }
+    inner(allProduct)
+}

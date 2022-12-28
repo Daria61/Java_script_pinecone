@@ -40,7 +40,7 @@ function Modal(){
                 <p class = "col-4 overflow-hidden">${a.title}</p>
                 <p class = "col-3">${a.price}</p>
                 <div class= "col-2 row ">
-                    <button class = " btn col-2"> <i class="bi bi-trash3"></i></button>
+                    <button class = " btn col-2" onclick="DeleteWish('${index}')"> <i class="bi bi-trash3"></i></button>
                     <button class = " btn  col-2 ms-5"><a href="./detail.html?productID=${a.id}"><i class="bi bi-three-dots"></i></a></button>
                 </div>
             </div>
@@ -62,11 +62,11 @@ function Modal(){
         </div>
     </div>
     `
-    modal.innerHTML = row
-    document.getElementById("modal").style.display = "block"
+    modalnem.innerHTML = row
+    document.getElementById("modalnem").style.display = "block"
     let CancelMod = document.getElementById("cancel")
     CancelMod.addEventListener("click",()=>{
-        document.getElementById("modal").style.display = "none"
+        document.getElementById("modalnem").style.display = "none"
     })   
 }
 
@@ -98,6 +98,15 @@ function show(){
     `
     main.innerHTML = row
 }
+function DeleteWish(index){
+    console.log(index);
+    wishList.map((a,id) =>{
+        if(index == id){
+            wishList.splice(id, 1)
+        }
+    })
+    Modal()
+}
 function Modaldet(){
    let row = ""
    let roow = ""
@@ -122,7 +131,7 @@ function Modaldet(){
                <p class = "col-4 overflow-hidden">${a.title}</p>
                <p class = "col-3">${a.price}</p>
                <div class= "col-2 row ">
-                   <button class = " btn col-2"> <i class="bi bi-trash3"></i></button>
+                   <button class = " btn col-2" onclick="DeleteWish('${index}')"> <i class="bi bi-trash3"></i></button>
                    <button class = " btn  col-2 ms-5"><a href="./detail.html?productID=${a.id}"><i class="bi bi-three-dots"></i></a></button>
                </div>
            </div>
