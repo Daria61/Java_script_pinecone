@@ -6,6 +6,7 @@ let aside = document.getElementById("asideCate")
 let input = document.getElementById("input")
 let wish = document.getElementById("wish")
 let modal = document.getElementById("modal")
+let pagesFill = document.getElementById("Pages")
 let wishNum = 0
 wish.innerHTML = wishNum
 fillproduct()
@@ -25,19 +26,23 @@ function inner(para){
     let row = ''
     list.innerHTML = "";
     (para ? (para.length == 0 ? [] : para) : allProduct).map((a) =>{
-        row+= `<div class = "col-4 "> 
+        row+= `<div class = "col-3 ">
+        <a href="./detail.html?productID=${a.id}" >
+        <div> 
         <div class = "m-2 border rounded p-0">
         <img class = "rounded" src="${a.thumbnail}">
         <div class = "m-3 ">
         <h5>${a.title}</h5>
         <p>Price: ${a.price}</p>
         <p class = "descrip">Description: ${a.description}</p>
+        </a>
         <div class ="row">
             <p class ="col"><i class="color-warning bi bi-star-fill"></i> ${a.rating}/5</p>
             <button class ="col btn btn-primary" onclick="AddWish('${a.id}')" >Add</button>
         </div>
         </div>
-        </div></div>`
+        </div></div>
+        </div>`
     })
     list.innerHTML = row
 }
