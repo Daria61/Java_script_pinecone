@@ -14,7 +14,7 @@
     <header>
         <div class="row mt-3 justify-content-between">
             <div id="logo " class="col-1 ">
-                <img src="https://i.pinimg.com/originals/7a/85/32/7a853220cce2fced4a053c36bb96883f.png" alt="" id="logo">
+                <a href="Home.html"><img src="https://i.pinimg.com/originals/7a/85/32/7a853220cce2fced4a053c36bb96883f.png" alt="" id="logo"></a>
             </div>
             <div id="search" class="col-8 row border rounded-5 justify-content-start p-1">
                 <i class="mt-2 col-1 bi bi-search"></i>
@@ -36,11 +36,16 @@
         <aside class="col-2  mt-4  ">
             <h5 class="border rounded p-2 text-center" ><i class="bi bi-caret-down pe-2"></i> Category</h5>
             <div id="asideCate"></div>
+            <div class="pt-3">
+                <div id="sortByprice">
+                    <button class="btn btn-outline-info mb-2" onclick="SortByPrice('low')">Price: Low → High</button>
+                    <button class="btn btn-outline-info" onclick="SortByPrice('high')">Price: High → Low</button>
+                </div>
+            </div>
         </aside>
         <div id="list" class="row p-4 col-9"></div>
         <div id="Pages"></div>
     </main>
     <script src="shopppy.js"></script>
-    <script src="ProductDetails.js"></script>
 </body>
 </html>
