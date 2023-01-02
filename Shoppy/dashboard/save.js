@@ -1,10 +1,8 @@
-let btnEl = document.getElementById("btn")
+let saveBtn = document.getElementById("btn")
 let title = document.getElementById("title")
-let 
-   
-
-btnEl.addEventListener("click", OnSave())
+ 
+saveBtn.addEventListener("click" ,OnSave(e))
 
 function OnSave(e){
-
+    
 }
