@@ -100,6 +100,7 @@ function DeleteWish(index){
             wishList.splice(id, 1)
         }
     })
+    console.log(wishList);
     Modal()
 }
 function Modal(){
